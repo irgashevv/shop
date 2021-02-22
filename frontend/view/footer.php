@@ -74,7 +74,7 @@
                 </div>
 			</div>
 				<div class="info">
-					 Conditions of Use Privacy Notice © 2012-2013, Booksonline, Inc. or its affiliates 
+					 Condition of Use Privacy Notice © 2012-2013, Booksonline, Inc. or its affiliates
 				</div>
 		</footer>
 	</body>
