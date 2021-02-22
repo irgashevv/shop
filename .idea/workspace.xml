@@ -20,8 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="530445ab-e673-4652-9b85-bd810c0fa274" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/common/src/Model/Order.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/src/Model/OrderItem.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/view/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/view/footer.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,6 +35,14 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
   <component name="ProjectId" id="1ojffYh8OS3sPYGhzSyrgg2Gwn6" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -44,12 +53,13 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/frontend/src/Controller" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/common/src/Model" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\User\Desktop\open.server.5.3.7.full\OpenServer\domains\localhost\shop\common\src\Model" />
       <recent name="D:\0open\OpenServer\domains\localhost\shop\frontend\src\Controller" />
       <recent name="D:\0open\OpenServer\domains\localhost\shop\common\src\Service" />
     </key>
@@ -90,36 +100,6 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="714" y="443" key="#Notifications" timestamp="1613840370576">
-      <screen x="0" y="40" width="1920" height="1160" />
-    </state>
-    <state x="714" y="443" key="#Notifications/0.40.1920.1160@0.40.1920.1160" timestamp="1613840370576" />
-    <state x="667" y="262" key="#PHP" timestamp="1613840734043">
-      <screen x="0" y="40" width="1920" height="1160" />
-    </state>
-    <state x="667" y="262" key="#PHP/0.40.1920.1160@0.40.1920.1160" timestamp="1613840734043" />
-    <state x="552" y="278" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1613806234140">
-      <screen x="0" y="40" width="1920" height="1160" />
-    </state>
-    <state x="552" y="278" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.40.1920.1160@0.40.1920.1160" timestamp="1613806234140" />
-    <state x="688" y="342" key="NewPhpClassDialog" timestamp="1613852768226">
-      <screen x="0" y="40" width="1920" height="1160" />
-    </state>
-    <state x="688" y="342" key="NewPhpClassDialog/0.40.1920.1160@0.40.1920.1160" timestamp="1613852768226" />
-    <state x="794" y="543" key="NewPhpFileDialog" timestamp="1613851470193">
-      <screen x="0" y="40" width="1920" height="1160" />
-    </state>
-    <state x="794" y="543" key="NewPhpFileDialog/0.40.1920.1160@0.40.1920.1160" timestamp="1613851470193" />
-    <state x="461" y="264" key="SettingsEditor" timestamp="1613902424901">
-      <screen x="0" y="40" width="1920" height="1160" />
-    </state>
-    <state x="461" y="264" key="SettingsEditor/0.40.1920.1160@0.40.1920.1160" timestamp="1613902424901" />
-    <state x="667" y="219" width="585" height="801" key="find.popup" timestamp="1613897938985">
-      <screen x="0" y="40" width="1920" height="1160" />
-    </state>
-    <state x="667" y="219" width="585" height="801" key="find.popup/0.40.1920.1160@0.40.1920.1160" timestamp="1613897938985" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
