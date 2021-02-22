@@ -20,9 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="530445ab-e673-4652-9b85-bd810c0fa274" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/common/src/Model/Order.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/src/Model/OrderItem.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/Model/BasketItem.php" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/Model/BasketItem.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/Service/BasketCookieService.php" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/Service/BasketCookieService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/view/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/view/header.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,6 +34,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="HARD" />
   </component>
   <component name="GitSEFilterConfiguration">
     <file-type-list>

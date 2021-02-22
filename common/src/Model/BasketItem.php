@@ -39,7 +39,6 @@ class BasketItem
 	{
 		if (empty($this->basket_id) || empty($this->product_id) || empty($this->quantity)) {
 			throw new Exception("Empty Basket Item Field ");
-			
 		}
 
 		$query = "UPDATE basket_item SET quantity=" . $this->quantity 
