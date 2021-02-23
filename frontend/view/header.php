@@ -14,7 +14,7 @@
 			<div class="top">
 				<div class="width1024">
 					<ul class="desktop-element">
-						<li><a href="">Sign in</a></li>
+						<li><a href="http://localhost/shop/frontend/index.php?model=site&action=login">Sign in</a></li>
 						<li><a href="">My account</a></li>
 						<li><a href="">Order Status</a></li>
 						<li><a href="">Help</a></li>
