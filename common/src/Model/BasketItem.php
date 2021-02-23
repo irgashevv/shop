@@ -20,24 +20,23 @@ class BasketItem
 		$this->quantity = $quantity;
 	}
 
-
 	public function save()
 	{
-		
 		$query = "INSERT INTO basket_item VALUES (null,'" . $this->basket_id . "', '" . $this->product_id . "', '" . $this->quantity . "')";
 
 		$result = mysqli_query($this->conn, $query);
 
-		if (!$result) {
+		if (!$result)
+		{
 			throw new Exception(mysqli_error($this->conn));
 		}
-
 	}
 
 
 	public function update()
 	{
-		if (empty($this->basket_id) || empty($this->product_id) || empty($this->quantity)) {
+		if (empty($this->basket_id) || empty($this->product_id) || empty($this->quantity))
+		{
 			throw new Exception("Empty Basket Item Field ");
 		}
 
@@ -47,7 +46,8 @@ class BasketItem
 		. " limit 1" ;
 		$result = mysqli_query($this->conn, $query);
 
-		if (!$result) {
+		if (!$result)
+		{
 			throw new Exception(mysqli_error($this->conn));
 		}
 	}

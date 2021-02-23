@@ -1,6 +1,5 @@
 <?php
 
-
 class SecuritySecrvice
 {
     public function checkPassword($login, $password)
@@ -14,5 +13,4 @@ class SecuritySecrvice
         header("location: http://localhost/shop/frontend/index.php");
         die();
     }
-
 }

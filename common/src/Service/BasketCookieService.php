@@ -16,7 +16,8 @@ class BasketCookieService implements BasketInterface
     public function getBasketProducts($basket_id)
     {
         $data = $_COOKIE['basket'] ?? [];
-        if (empty($data) && sizeof($data) == 0) {
+        if (empty($data) && sizeof($data) == 0)
+        {
             return $data;
         }
         return unserialize($data);
@@ -31,8 +32,10 @@ class BasketCookieService implements BasketInterface
     {
         $data = $this->getBasketProducts($basket_id);
 
-        foreach ($data as $key => $item) {
-            if ($item['product_id'] === $product_id) {
+        foreach ($data as $key => $item)
+        {
+            if ($item['product_id'] === $product_id)
+            {
                 $data[$key]['quantity'] = $qty;
             }
         }

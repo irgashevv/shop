@@ -1,6 +1,5 @@
 <?php
 
-
 class OrderService
 {
     const STATUS_NEW = 0;

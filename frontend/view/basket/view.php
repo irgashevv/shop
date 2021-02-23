@@ -50,4 +50,5 @@
         <a href="http://localhost/shop/frontend/index.php?model=order&action=index">Create Order</a>
 	</div>
 </div>
+
 <?php include_once __DIR__ . "/../footer.php"; ?>

@@ -21,7 +21,8 @@ class Basket
 	{
 		$query = "INSERT INTO basket VALUES (null,'" . $this->userId . "')";
 		$result = mysqli_query($this->conn, $query);
-		if (!$result) {
+		if (!$result)
+		{
 			throw new Exception(mysqli_error($this->conn));
 		}
 	}

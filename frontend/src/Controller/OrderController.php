@@ -29,7 +29,6 @@ class OrderController
         $status = OrderService::STATUS_NEW;
         $updated = date('Y-m-d H:i:s', time());
 
-
         $order = new Order(
             null,
             $userId,
@@ -45,23 +44,21 @@ class OrderController
         );
 
         $orderId = $order->save();
-
-        if (empty($orderId)) {
-            throw new Exception("Order ID is null", 400);
-        }
+            if (empty($orderId))
+            {
+                throw new Exception("Order ID is null", 400);
+            }
 
         $items = (new BasketCookieService())->getBasketProducts("");
-
-        if (empty($items)) {
-            throw new Exception("Basket is Empty", 400);
-
-        }
-
-        foreach ($items as $item) {
-            $orderItem = new OrderItem($orderId, (int)$item['product_id'], (int)$item['quantity']);
-            $orderItem->save();
-        }
-        die('Super!!!');
+            if (empty($items))
+            {
+                throw new Exception("Basket is Empty", 400);
+            }
+            foreach ($items as $item)
+            {
+                $orderItem = new OrderItem($orderId, (int)$item['product_id'], (int)$item['quantity']);
+                $orderItem->save();
+            }
+            die('Super!!!');
     }
-
 }

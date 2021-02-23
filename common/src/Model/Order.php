@@ -109,8 +109,10 @@ class Order
         $this->name = $name;
         $this->phone = $phone;
         $this->email = $email;
-        if ($this->id == null) {
-        $this->created = date('Y-m-d H:i:s', time());
+
+        if ($this->id == null)
+        {
+            $this->created = date('Y-m-d H:i:s', time());
         }
 
         $this->updated = $updated ?? date('Y-m-d H:i:s', time());
@@ -332,14 +334,25 @@ class Order
                     name,
                     email,
                     phone) 
-        VALUES (null,'" . $this->userId . "' , '" . $this->status . "', '". $this->created
-            . "', '" . $this->updated . "', '" . $this->deliveryId . "', '" . $this->paymentId .
-            "', '" . $this->total . "', '" . $this->comment
-            . "', '" . $this->name . "', '" . $this->phone . "', '" . $this->email . "')";
+        VALUES (
+                null,
+                '" . $this->userId . "' ,
+                '" . $this->status . "',
+                '". $this->created . "',
+                '" . $this->updated . "',
+                '" . $this->deliveryId . "',
+                '" . $this->paymentId . "',
+                '" . $this->total . "',
+                '" . $this->comment . "',
+                '" . $this->name . "',
+                '" . $this->phone . "',
+                '" . $this->email . "'
+                )";
 
 		$result = mysqli_query($this->conn, $query);
 
-		if (!$result) {
+		if (!$result)
+		{
 			throw new Exception(mysqli_error($this->conn));
 		}
 
@@ -356,5 +369,4 @@ class Order
 		$one = mysqli_fetch_all($result, MYSQLI_ASSOC);
 		return reset($one);
 	}
-
 }

@@ -19,18 +19,17 @@ class AuthController
 
 	    // TODO Get user from DB
 
-	    if (!$this->securityService->checkPassword($login, $password)) {
+	    if (!$this->securityService->checkPassword($login, $password))
+	    {
 	        throw new Exception('Incorrect Login or Password', 403);
         }
-
 	    // TODO Fix User Data
-	    UserService::saveUserData([
-            'id' => 1,
-            'login' => $login,
-            'role' => 'guest'
-        ]);
-
+	    UserService::saveUserData(
+	        [
+                'id' => 1,
+                'login' => $login,
+                'role' => 'guest'
+            ]);
 	    SecuritySecrvice::redirectToStartPage();
-
     }
 }

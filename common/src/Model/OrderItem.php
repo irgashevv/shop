@@ -28,27 +28,29 @@ class OrderItem
 
 		$result = mysqli_query($this->conn, $query);
 
-		if (!$result) {
+		if (!$result)
+		{
 			throw new Exception(mysqli_error($this->conn));
 		}
 
 	}
 
-
 	public function update()
 	{
-		if (empty($this->order_id) || empty($this->product_id) || empty($this->quantity)) {
+		if (empty($this->order_id) || empty($this->product_id) || empty($this->quantity))
+		{
 			throw new Exception("Empty Order Item Field ");
-			
 		}
 
-		$query = "UPDATE order_item SET quantity=" . $this->quantity
-		. " WHERE order_id = " . $this->order_id
-		. " AND product_id = " . $this->product_id 
-		. " limit 1" ;
+		$query = "UPDATE order_item SET quantity="
+            . $this->quantity
+		    . " WHERE order_id = " . $this->order_id
+		    . " AND product_id = " . $this->product_id
+		    . " limit 1" ;
 		$result = mysqli_query($this->conn, $query);
 
-		if (!$result) {
+		if (!$result)
+		{
 			throw new Exception(mysqli_error($this->conn));
 		}
 	}

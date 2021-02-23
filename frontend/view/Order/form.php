@@ -1,20 +1,17 @@
 <?php include_once __DIR__ . "/../header.php"; ?>
+
 <div class="width1024">
     <h1>Create Order</h1>
     <form action="http://localhost/shop/frontend/index.php?model=order&action=create" method="post">
-
         <div>
             <label>Name:</label> <input type="text" name="name" required>
         </div>
-
         <div>
             <label>Phone:</label> <input type="text" name="phone" required>
         </div>
-
         <div>
             <label>Email:</label> <input type="email" name="email" required>
         </div>
-
         <div>
             <label>Delivery:</label>
             <select name="delivery">
@@ -23,7 +20,6 @@
                 <option value="3">Delivery 3 </option>
             </select>
         </div>
-
         <div>
             <label>Payment:</label>
             <select name="payment">
@@ -41,4 +37,5 @@
         </div>
     </form>
 </div>
+
 <?php include_once __DIR__ . "/../footer.php"; ?>
