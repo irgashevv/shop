@@ -26,7 +26,7 @@
 
         <div>
             <label>Payment:</label>
-            <select name="delivery">
+            <select name="payment">
                 <option value="1">Payment 1</option>
                 <option value="2">Payment 2 </option>
                 <option value="3">Payment 3 </option>

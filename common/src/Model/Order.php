@@ -49,6 +49,24 @@ class Order
      */
     private $comment;
 
+
+    /**
+     * @var string
+     */
+    private $name;
+
+    /**
+     * @var string
+     */
+    private $phone;
+
+
+    /**
+     * @var string
+     */
+    private $email;
+
+
     /**
      * @var false|mysqli
      */
@@ -62,6 +80,9 @@ class Order
      * @param int $paymentId
      * @param int $status
      * @param int $updated
+     * @param string $name
+     * @param string $phone
+     * @param string $email
      * @param string $comment
      */
 	public function __construct(
@@ -71,6 +92,9 @@ class Order
         $deliveryId = null,
         $total = null,
         $comment = null,
+        $name = null,
+        $phone = null,
+        $email = null,
         $status = null,
         $updated = null)
 	{
@@ -82,6 +106,9 @@ class Order
         $this->total = $total;
         $this->status = $status;
         $this->comment = $comment;
+        $this->name = $name;
+        $this->phone = $phone;
+        $this->email = $email;
         if ($this->id == null) {
         $this->created = date('Y-m-d H:i:s', time());
         }
@@ -101,7 +128,7 @@ class Order
      * @param $status
      * @return mixed|null
      */
-    public function getStatus($status)
+    public function getStatus()
     {
         return $this->status;
     }
@@ -206,10 +233,6 @@ class Order
     }
 
 
-
-
-
-
     /**
      * @return false|string
      */
@@ -242,9 +265,58 @@ class Order
         $this->updated = $updated;
     }
 
+    /**
+     * @return string
+     */
+    public function getName(): string
+    {
+        return $this->name;
+    }
+
+    /**
+     * @param string $name
+     */
+    public function setName(string $name)
+    {
+        $this->name = $name;
+    }
+
+    /**
+     * @return string
+     */
+    public function getPhone(): string
+    {
+        return $this->phone;
+    }
+
+    /**
+     * @param string $phone
+     */
+    public function setPhone(string $phone)
+    {
+        $this->phone = $phone;
+    }
+
+    /**
+     * @return string
+     */
+    public function getEmail(): string
+    {
+        return $this->email;
+    }
+
+    /**
+     * @param string $email
+     */
+    public function setEmail(string $email)
+    {
+        $this->email = $email;
+    }
 
 
-
+    /**
+     * @throws Exception
+     */
 	public function save()
 	{
 		$query = "INSERT INTO orders (
@@ -256,16 +328,26 @@ class Order
                     delivery_id, 
                     payment_id, 
                     total, 
-                    comment) 
+                    comment, 
+                    name,
+                    email,
+                    phone) 
         VALUES (null,'" . $this->userId . "' , '" . $this->status . "', '". $this->created
             . "', '" . $this->updated . "', '" . $this->deliveryId . "', '" . $this->paymentId .
-            "', '" . $this->total . "', '" . $this->comment . "')";
+            "', '" . $this->total . "', '" . $this->comment
+            . "', '" . $this->name . "', '" . $this->phone . "', '" . $this->email . "')";
 
 		$result = mysqli_query($this->conn, $query);
 
 		if (!$result) {
 			throw new Exception(mysqli_error($this->conn));
 		}
+
+		    $result =  mysqli_query($this->conn, "SELECT LAST_INSERT_ID() as last_id");
+
+		    $result = mysqli_fetch_all($result, MYSQLI_ASSOC);
+
+		    return reset ($result)['last_id'] ??null;
 	}
 
 	public function getFromDB()

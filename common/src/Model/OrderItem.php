@@ -15,7 +15,7 @@ class OrderItem
 		$quantity = null) 
 	{
 		$this->conn = DBConnector::getInstance()->connect();
-		$this->order_id = order_id;
+		$this->order_id = $order_id;
 		$this->product_id = $product_id;
 		$this->quantity = $quantity;
 	}

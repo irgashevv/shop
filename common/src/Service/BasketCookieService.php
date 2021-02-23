@@ -3,6 +3,7 @@
 include_once __DIR__ . "/../Model/Basket.php";
 include_once __DIR__ . "/../Model/BasketItem.php";
 include_once __DIR__ . "/Interfaces/BasketInterface.php";
+include_once __DIR__ . "/../Service/BasketService.php";
 
 class BasketCookieService implements BasketInterface
 {
@@ -10,7 +11,7 @@ class BasketCookieService implements BasketInterface
 
     /**
      * @param $basket_id
-     * @return array|mixed
+     * @return array
      */
     public function getBasketProducts($basket_id)
     {
