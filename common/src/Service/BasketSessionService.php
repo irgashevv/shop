@@ -45,4 +45,14 @@ class BasketSessionService extends BasketService
 
 		$_SESSION['basket'] = serialize($session);
 	}
+
+	public function clearBasket($basket_id)
+    {
+        // TODO: Implement clearBasket() method.
+    }
+
+    public function getBasketIdByUserId($basket_id)
+    {
+        // TODO: Implement getBasketIdByUserId() method.
+    }
 }

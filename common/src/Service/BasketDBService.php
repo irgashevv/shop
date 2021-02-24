@@ -43,4 +43,16 @@ class BasketDBService extends BasketService
     {
         return (new BasketItem())->getByBasketId($basket_id);
     }
+
+    public function clearBasket($basket_id)
+    {
+        (new BasketItem())->clearByBasketById($basket_id);
+    }
+
+    public function getBasketIdByUserId($userId)
+    {
+        return (new Basket($userId))->getFromDB()['id'];
+    }
+
+
 }

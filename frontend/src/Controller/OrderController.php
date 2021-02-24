@@ -3,12 +3,22 @@
 include_once __DIR__ . "/../../../common/src/Service/OrderService.php";
 include_once __DIR__ . "/../../../common/src/Service/UserService.php";
 include_once __DIR__ . "/../../../common/src/Service/BasketCookieService.php";
+include_once __DIR__ . "/../../../common/src/Service/BasketDBService.php";
 include_once __DIR__ . "/../../../common/src/Model/Order.php";
 include_once __DIR__ . "/../../../common/src/Model/OrderItem.php";
 
 
 class OrderController
 {
+    private $basketService;
+
+    public function __construct()
+    {
+        // TODO Check BasketService with BasketController
+        $this->basketService = new BasketDBService();
+//        $this->basketService = new BasketCookieService();
+    }
+
     public function index()
     {
         include_once __DIR__ . "/../../view/order/form.php";
@@ -49,7 +59,8 @@ class OrderController
                 throw new Exception("Order ID is null", 400);
             }
 
-        $items = (new BasketCookieService())->getBasketProducts("");
+        $basketId = $this->basketService->getBasketIdByUserId($userId);
+        $items = $this->basketService->getBasketProducts($basketId);
             if (empty($items))
             {
                 throw new Exception("Basket is Empty", 400);
@@ -59,6 +70,11 @@ class OrderController
                 $orderItem = new OrderItem($orderId, (int)$item['product_id'], (int)$item['quantity']);
                 $orderItem->save();
             }
+
+            // Clear Basket
+        $this->basketService->clearBasket($basketId);
+
+
             header("location: http://localhost/shop/frontend/index.php?model=order&action=success&order_id=" . $orderId);
     }
 

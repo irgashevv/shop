@@ -38,4 +38,5 @@ class Basket
 	{
 		mysqli_query ($this->conn, "delete from basket where user_id = $userId");
 	}
+
 }

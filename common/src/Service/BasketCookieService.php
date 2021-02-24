@@ -66,4 +66,15 @@ class BasketCookieService extends BasketService
         //log()
         setcookie('basket', serialize($data), time() + self::TIME_EXPIRED);
     }
+
+
+    public function clearBasket($basket_id)
+    {
+        // TODO: Implement clearBasket() method.
+    }
+
+    public function getBasketIdByUserId($basket_id)
+    {
+        // TODO: Implement getBasketIdByUserId() method.
+    }
 }
