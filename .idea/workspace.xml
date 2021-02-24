@@ -21,15 +21,11 @@
   <component name="ChangeListManager">
     <list default="true" id="530445ab-e673-4652-9b85-bd810c0fa274" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/Model/Basket.php" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/Model/Basket.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/Service/BasketCookieService.php" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/Service/BasketCookieService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/Service/BasketDBService.php" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/Service/BasketDBService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/Service/BasketService.php" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/Service/BasketService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/Service/BasketSessionService.php" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/Service/BasketSessionService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/Service/Interfaces/BasketInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/Service/Interfaces/BasketInterface.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/Controller/BasketController.php" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/Controller/BasketController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/Controller/OrderController.php" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/Controller/OrderController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/view/exeptions/400.php" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/view/exeptions/400.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/fixtures_pics/01.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/backend/fixtures_pics/01.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/fixtures_pics/02.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/backend/fixtures_pics/02.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/fixtures_pics/03.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/backend/fixtures_pics/03.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/fixtures_pics/04.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/backend/fixtures_pics/04.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/Fixtures/Fixture01.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/Fixtures/Fixture01.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,7 +90,7 @@
       <workItem from="1613986032712" duration="31000" />
       <workItem from="1613986073648" duration="470000" />
       <workItem from="1614071449153" duration="16268000" />
-      <workItem from="1614146044687" duration="8133000" />
+      <workItem from="1614146044687" duration="10997000" />
     </task>
     <servers />
   </component>
