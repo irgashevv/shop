@@ -5,7 +5,7 @@ include_once __DIR__ . "/../Model/BasketItem.php";
 include_once __DIR__ . "/Interfaces/BasketInterface.php";
 include_once __DIR__ . "/../Service/BasketService.php";
 
-class BasketCookieService implements BasketInterface
+class BasketCookieService extends BasketService
 {
     const TIME_EXPIRED = 3600;
 

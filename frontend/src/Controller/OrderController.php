@@ -59,6 +59,13 @@ class OrderController
                 $orderItem = new OrderItem($orderId, (int)$item['product_id'], (int)$item['quantity']);
                 $orderItem->save();
             }
-            die('Super!!!');
+            header("location: http://localhost/shop/frontend/index.php?model=order&action=success&order_id=" . $orderId);
+    }
+
+    public  function  success()
+    {
+        $orderId = (int)$_GET['order_id'];
+
+        include_once __DIR__ . "/../../view/Order/success.php";
     }
 }
