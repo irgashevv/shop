@@ -35,6 +35,7 @@ include_once __DIR__ . "/../../../common/src/Service/OrderService.php";
                 $email = htmlspecialchars($_POST['email']);
                 $status = (int)$_POST['status'];
                 $updated = date('Y-m-d H:i:s', time());
+
                 // TODO Need develop
                 $total = 0;
 
@@ -42,7 +43,7 @@ include_once __DIR__ . "/../../../common/src/Service/OrderService.php";
                     (new Order($id, null, $payment, $delivery, $total,
                         "", $name, $phone, $email, $status, $updated))->update();
                 }
-                header( "Location: /http://localhost/shop/backend/index.php?model=order&action=read");
+                header( "Location: index.php?model=order&action=read");
             }
 
 		    $one = (new Order())->getById((int)$_GET['id']);
