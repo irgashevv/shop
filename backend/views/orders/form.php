@@ -46,15 +46,15 @@
                             Delivery
                         </label>
                         <div class="col-sm-10">
-                            <select name="delivery">
+                            <select name="delivery_id">
                                 <option disabled selected></option>
-                                <option value="1" <?=($one['delivery_id'] == '1') ? 'selected' : ''?>>
+                                <option value="1">
                                     Delivery 1
                                 </option>
-                                <option value="2" <?=($one['delivery_id'] == '2') ? 'selected' : ''?>>
+                                <option value="2">
                                     Delivery 2
                                 </option>
-                                <option value="3" <?=($one['delivery_id'] == '3') ? 'selected' : ''?>>
+                                <option value="3">
                                     Delivery 3
                                 </option>
                             </select>
@@ -66,15 +66,15 @@
                             Payment
                         </label>
                         <div class="col-sm-10">
-                                <select name="payment">
+                                <select name="payment_id">
                                     <option disabled selected></option>
-                                    <option value="1" <?=($one['payment_id'] == '1') ? 'selected' : ''?>>
+                                    <option value="1">
                                         Payment 1
                                     </option>
-                                    <option value="2" <?=($one['payment_id'] == '2') ? 'selected' : ''?>>
+                                    <option value="2">
                                         Payment 2
                                     </option>
-                                    <option value="3" <?=($one['payment_id'] == '3') ? 'selected' : ''?>>
+                                    <option value="3">
                                         Payment 3
                                     </option>
                                 </select>
@@ -125,8 +125,7 @@
                                 <select name="status">
                                     <option disabled selected></option>
                                     <?php foreach (OrderService::getStatuses() as $key => $label) : ?>
-                                    <option value="<?=$key?>" <?=($key  == $one['status'])
-                                        ? 'selected' : ''?>><?=$label?></option>
+                                    <option <?= $one['status'] ?? null == $key ? 'selected' : ''?> value="<?= $key ?>"></option>
                                     <?php endforeach; ?>
                                 </select>
                             </div>
@@ -157,4 +156,7 @@
         </div>
     </section>
 </div>
-<?php include_once __DIR__ . "/../footer.php"; ?>
+
+<?php
+    include_once __DIR__ . "/../footer.php";
+?>

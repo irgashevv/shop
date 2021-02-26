@@ -368,14 +368,15 @@ class Order
      */
 	public function update()
 	{
-		$query = "UPDATE orders SET  status = '" . $this->status . "',
+		$query = "UPDATE orders SET  
+                status = '" . $this->status . "',
                 updated = '" . $this->updated . "',
                 delivery_id = '" . $this->deliveryId . "',
                 payment_id = '" . $this->paymentId . "',
                 total = '" . $this->total . "',
                 name = '" . $this->name . "',
-                phone = '" . $this->phone . "',
-                email = '" . $this->email . "'
+                email = '" . $this->email . "',
+                phone = '" . $this->phone . "'
                 where id = " . $this->id . " limit 1";
 
 		$result = mysqli_query($this->conn, $query);
@@ -405,7 +406,9 @@ class Order
     public function getById($id)
     {
         $result = mysqli_query($this->conn, "select * from orders where id = " . $id . " limit 1");
+
         $one = mysqli_fetch_all($result, MYSQLI_ASSOC);
+
         return reset($one);
     }
 }

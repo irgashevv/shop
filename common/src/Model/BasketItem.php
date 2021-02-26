@@ -54,7 +54,7 @@ class BasketItem
 
 	public function getByBasketId($basket_id)
 	{
-		$result = mysqli_query($this->conn, "SELECT * FROM basket_item WHERE basket_id=$basket_id ");
+		$result = mysqli_query($this->conn, "SELECT * FROM basket_item WHERE basket_id=$basket_id");
 		$items = mysqli_fetch_all($result, MYSQLI_ASSOC);
 		return $items;
 	}

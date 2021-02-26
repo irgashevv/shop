@@ -7,12 +7,12 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1>Orders</h1>
+                    <h1>Заказы</h1>
                 </div>
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
                         <li class="breadcrumb-item"><a href="#">Главная</a></li>
-                        <li class="breadcrumb-item active">Orders</li>
+                        <li class="breadcrumb-item active">Заказы</li>
                     </ol>
                 </div>
             </div>
@@ -24,16 +24,16 @@
                 <table class="table table-striped projects">
                     <thead>
                         <th>ID</th>
-                        <th>User Id</th>
-                        <th>Total</th>
-                        <th>Payment</th>
-                        <th>Delivery</th>
-                        <th>Name</th>
-                        <th>Phone</th>
-                        <th>Email</th>
-                        <th>Status</th>
-                        <th>Created</th>
-                        <th>Дата Обновления</th>
+                        <th>ID польз</th>
+                        <th>Итого</th>
+                        <th>Оплата</th>
+                        <th>Доставка</th>
+                        <th>Имя</th>
+                        <th>Тел</th>
+                        <th>Почта</th>
+                        <th>Статус</th>
+                        <th>Создание</th>
+                        <th>Обновление</th>
                         <th>Действия</th>
                     </thead>
                     <tbody>
@@ -56,7 +56,9 @@
 </i>
 View
 </a-->
-                                <a class="btn btn-info btn-sm" href="http://localhost/shop/backend/index.php?model=order&action=update&id=<?=$n['id']?>">
+                                <a class="btn btn-info btn-sm"
+                                   href="http://localhost/shop/backend/index.php?model=order&action=update&id=
+                                   <?=$n['id']?>">
                                     <i class="fas fa-pencil-alt"> </i> Редактировать </a>
                             </td>
                         </tr>

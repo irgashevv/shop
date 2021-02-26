@@ -31,8 +31,8 @@ class OrderController
         $phone = htmlspecialchars($_POST['phone']);
         // TODO Validation Email
         $email = htmlspecialchars($_POST['email']);
-        $delivery = (int)$_POST['delivery'];
-        $payment = (int)$_POST['payment'];
+        $delivery = (int)$_POST['delivery_id'];
+        $payment = (int)$_POST['payment_id'];
         $comment = htmlspecialchars($_POST['comment']);
         $userId = UserService::getCurrentUser()['id'] ?? 0;
         $total = 0;
