@@ -6,4 +6,15 @@ class OrderService
     const STATUS_IN_PROCESS = 1;
     const STATUS_COMPLETED = 2;
     const STATUS_CANCELED = 2;
+
+    public static function getStatuses()
+    {
+        return [
+            self::STATUS_NEW => 'New',
+            self::STATUS_IN_PROCESS => 'in Process',
+            self::STATUS_COMPLETED => 'Completed',
+            self::STATUS_CANCELED => 'Canceled',
+        ];
+    }
+
 }

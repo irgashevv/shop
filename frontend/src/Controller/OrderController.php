@@ -14,7 +14,7 @@ class OrderController
 
     public function __construct()
     {
-        // TODO Check BasketService with BasketController
+        // TODO Check BasketService with OrderController
         $this->basketService = new BasketDBService();
 //        $this->basketService = new BasketCookieService();
     }

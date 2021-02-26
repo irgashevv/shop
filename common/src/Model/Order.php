@@ -338,15 +338,15 @@ class Order
                 null,
                 '" . $this->userId . "' ,
                 '" . $this->status . "',
-                '". $this->created . "',
+                '" . $this->created . "',
                 '" . $this->updated . "',
                 '" . $this->deliveryId . "',
                 '" . $this->paymentId . "',
                 '" . $this->total . "',
                 '" . $this->comment . "',
                 '" . $this->name . "',
-                '" . $this->phone . "',
-                '" . $this->email . "'
+                '" . $this->email . "',
+                '" . $this->phone . "'
                 )";
 
 		$result = mysqli_query($this->conn, $query);
@@ -363,10 +363,49 @@ class Order
 		    return reset ($result)['last_id'] ??null;
 	}
 
+    /**
+     * @throws Exception
+     */
+	public function update()
+	{
+		$query = "UPDATE orders SET  status = '" . $this->status . "',
+                updated = '" . $this->updated . "',
+                delivery_id = '" . $this->deliveryId . "',
+                payment_id = '" . $this->paymentId . "',
+                total = '" . $this->total . "',
+                name = '" . $this->name . "',
+                phone = '" . $this->phone . "',
+                email = '" . $this->email . "'
+                where id = " . $this->id . " limit 1";
+
+		$result = mysqli_query($this->conn, $query);
+
+		if (!$result)
+		{
+			throw new Exception(mysqli_error($this->conn));
+		}
+
+		    return true;
+	}
+
 	public function getFromDB()
 	{
 		$result = mysqli_query($this->conn, "select * from orders where user_id = " . $this->userId . " limit 1");
 		$one = mysqli_fetch_all($result, MYSQLI_ASSOC);
 		return reset($one);
 	}
+
+	public function all()
+	{
+		$result = mysqli_query($this->conn, "select * from orders");
+		return mysqli_fetch_all($result, MYSQLI_ASSOC);
+	}
+
+
+    public function getById($id)
+    {
+        $result = mysqli_query($this->conn, "select * from orders where id = " . $id . " limit 1");
+        $one = mysqli_fetch_all($result, MYSQLI_ASSOC);
+        return reset($one);
+    }
 }

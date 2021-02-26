@@ -4,9 +4,9 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Shop</title>
-	<link rel="stylesheet" href="css/styles.css">
+	<link rel="stylesheet" href="http://localhost/shop/frontend/css/styles.css">
 	<script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
-	<script src="js/scripts.js"></script>
+	<script src="http://localhost/shop/frontend/js/scripts.js"></script>
 </head>
 <body>
 	<header>
@@ -33,7 +33,7 @@
 				<div class="width1024 flex">
 					<div id="logo">
 						<a href="http://localhost/shop/frontend/index.php">
-                            <img src="imgs/logo.png" alt="">
+                            <img src="http://localhost/shop/frontend/imgs/logo.png" alt="">
                         </a>
 					</div>
 					<div id="search-field">

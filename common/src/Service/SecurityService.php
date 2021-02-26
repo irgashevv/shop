@@ -1,6 +1,6 @@
 <?php
 
-class SecuritySecrvice
+class SecurityService
 {
     public function checkPassword($login, $password)
     {

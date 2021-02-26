@@ -1,6 +1,6 @@
 <?php
 
-include_once __DIR__ . "/../../../common/src/Service/SecuritySecrvice.php";
+include_once __DIR__ . "/../../../common/src/Service/SecurityService.php";
 include_once __DIR__ . "/../../../common/src/Service/UserService.php";
 
 class AuthController
@@ -9,7 +9,7 @@ class AuthController
 
     public function __construct()
     {
-        $this->securityService = new SecuritySecrvice();
+        $this->securityService = new SecurityService();
     }
 
 	public function check()
@@ -30,6 +30,6 @@ class AuthController
                 'login' => $login,
                 'role' => 'guest'
             ]);
-	    SecuritySecrvice::redirectToStartPage();
+	    SecurityService::redirectToStartPage();
     }
 }

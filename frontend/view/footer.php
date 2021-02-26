@@ -68,9 +68,9 @@
 			<div id="payments-system">
 				<div> We accept all major Credit Card/Debit Card/Internet Banking </div>
 				<div>
-                    <img src="imgs/payments01.jpg" alt="">
-                    <img src="imgs/payments02.jpg" alt="">
-                    <img src="imgs/payments03.jpg" alt="">
+                    <img src="http://localhost/shop/frontend/imgs/payments01.jpg" alt="">
+                    <img src="http://localhost/shop/frontend/imgs/payments02.jpg" alt="">
+                    <img src="http://localhost/shop/frontend/imgs/payments03.jpg" alt="">
                 </div>
 			</div>
 				<div class="info">
